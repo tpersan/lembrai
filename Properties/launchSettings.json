@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "lembrai": {
+      "commandName": "Project",
+      "commandLineArgs": "GET CamUNDa"
+    }
+  }
+}
