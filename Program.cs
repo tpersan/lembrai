@@ -1,4 +1,4 @@
-﻿
+
 
 using lembrai;
 
@@ -7,12 +7,13 @@ if (!args.Any())
 
 List<string> Opcoes = new() { "GET", "SET" };
 
-if (!Opcoes.Contains(args[0]))
+var comando = args[0].ToUpperInvariant();
+
+if (!Opcoes.Contains(comando))
     throw new Exception("O que vc quer? GET OU SET?");
 
-if (args[0] == "GET")
+if (comando == "GET")
     Devolve.Lembrar(args[1]);
 
-if (args[0] == "SET")
+if (comando == "SET")
     Devolve.Escrever(args[1], args[2]);
-
